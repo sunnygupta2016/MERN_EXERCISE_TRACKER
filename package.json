@@ -43,6 +43,13 @@
    "devDependencies": {
     "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0"
+  },
+  "scripts":{
+  "start": "node server.js",
+  "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "engines": {
+  "node": "12.16.1"
   }
 
 }
