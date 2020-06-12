@@ -15,7 +15,7 @@
     "react-datepicker": "^3.0.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,10 +38,8 @@
       "last 1 safari version"
     ]
   },
-   "devDependencies": {
+  "devDependencies": {
     "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0"
   }
-  
-
 }
