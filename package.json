@@ -4,7 +4,16 @@
   "description": "ExerciseTracker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"cd client && npm run build",
+    "install-client":"cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+
+
+    "start": "node server.js",
+    "client": "cd client && npm start"
+
+
   },
   "keywords": [],
   "author": "Sunny Gupta",
@@ -14,11 +23,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.18"
-  },
-  "scripts":{
-  "start": "node server.js",
-  "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
-  },
+  },  
   "engines": {
   "node": "12.16.1"
   }
