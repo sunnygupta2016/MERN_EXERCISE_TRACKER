@@ -2,17 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "ExerciseTracker",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"cd client && npm run build",
-    "install-client":"cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm install --only=dev && npm install && npm run build",
-
-
+    "client-install":"npm install --prefix client",
     "start": "node server.js",
-    "client": "cd client && npm start"
-
+    "client": "npm start --prefix client",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPG_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
 
   },
   "keywords": [],
